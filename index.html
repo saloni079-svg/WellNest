@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WellNest | Community Wellness Directory</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <a href="#home" class="logo">WellNest<span>.</span></a>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#activities">Activities</a></li>
+                <li><a href="#organizers">Organizers</a></li>
+                <li><a href="#register">Register</a></li>
+            </ul>
+
+            <a href="#activities" class="nav-btn">Explore Activities</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="tagline">WELLNESS STARTS WITH COMMUNITY</p>
+
+            <h1>Find Your Space.<br>
+                <span>Feel Connected.</span>
+            </h1>
+
+            <p>
+                Discover local wellness activities, meet new people
+                and become part of a healthier and happier community.
+            </p>
+
+            <a href="#activities" class="btn">Explore Activities →</a>
+        </div>
+
+        <div class="hero-image">
+            <div class="circle">
+                <span>🌿</span>
+            </div>
+            <div class="hero-note">
+                Small Steps. Stronger Communities.
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section">
+        <p class="tagline">ABOUT WELLNEST</p>
+        <h2>Your Community, Your Wellbeing</h2>
+
+        <p>
+            WellNest is a community wellness activity directory
+            designed to help people discover non-clinical activities
+            such as group walks, yoga sessions, mindfulness activities
+            and social gatherings.
+        </p>
+    </section>
+
+    <!-- Activities Section -->
+    <section class="activities section" id="activities">
+
+        <div class="section-heading">
+            <p class="tagline">DISCOVER SOMETHING NEW</p>
+            <h2>Explore Activities</h2>
+            <p>Find an activity that matches your interests.</p>
+        </div>
+
+        <div class="filters">
+            <input type="text" id="search"
+                placeholder="Search activities...">
+
+            <select id="category">
+                <option value="all">All Categories</option>
+                <option value="Movement">Movement</option>
+                <option value="Mindfulness">Mindfulness</option>
+                <option value="Social">Social Connection</option>
+                <option value="Learning">Learning</option>
+            </select>
+        </div>
+
+        <div class="activity-container" id="activityContainer">
+        </div>
+
+        <p id="noResults" class="no-results" hidden>
+            No activities found. Try another search.
+        </p>
+
+    </section>
+
+    <!-- Organizers Section -->
+    <section class="organizers section" id="organizers">
+
+        <div class="section-heading">
+            <p class="tagline">OUR COMMUNITY</p>
+            <h2>Meet the Organizers</h2>
+            <p>People who make community wellness possible.</p>
+        </div>
+
+        <div class="organizer-container">
+
+            <div class="organizer-card">
+                <div class="avatar">AM</div>
+                <h3>Aman Mathur</h3>
+                <p>Yoga Instructor</p>
+                <span>Movement & Fitness</span>
+            </div>
+
+            <div class="organizer-card">
+                <div class="avatar">RK</div>
+                <h3>Rohan Kumar</h3>
+                <p>Wellness Volunteer</p>
+                <span>Mindfulness</span>
+            </div>
+
+            <div class="organizer-card">
+                <div class="avatar">SP</div>
+                <h3>Sahil Pratap</h3>
+                <p>Community Coordinator</p>
+                <span>Social Activities</span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section class="registration section" id="register">
+
+        <div class="section-heading">
+            <p class="tagline">TAKE THE FIRST STEP</p>
+            <h2>Register for an Activity</h2>
+            <p>Choose an activity and reserve your place.</p>
+        </div>
+
+        <form id="registrationForm">
+
+            <label for="name">Full Name</label>
+            <input type="text" id="name"
+                placeholder="Enter your name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email"
+                placeholder="Enter your email" required>
+
+            <label for="activity">Select Activity</label>
+            <select id="activity" required>
+                <option value="">Choose an activity</option>
+            </select>
+
+            <label class="checkbox">
+                <input type="checkbox" id="reminder">
+                Enable a reminder for this activity
+            </label>
+
+            <button type="submit" class="btn">
+                Complete Registration →
+            </button>
+
+            <p id="message" role="status"></p>
+
+        </form>
+    </section>
+
+    <!-- My Registrations -->
+    <section class="my-activities section">
+
+        <div class="section-heading">
+            <p class="tagline">YOUR ACTIVITIES</p>
+            <h2>My Registrations</h2>
+        </div>
+
+        <div id="myRegistrations">
+            <p>No registrations yet.</p>
+        </div>
+
+    </section>
+
+    <!-- Accessibility Section -->
+    <section class="accessibility section">
+        <h2>Everyone is Welcome</h2>
+
+        <p>
+            We encourage inclusive participation. Activity listings
+            provide accessibility information to help participants
+            understand available facilities and arrangements.
+            Contact the organizer before attending if you have
+            specific accessibility requirements.
+        </p>
+    </section>
+
+    <!-- Disclaimer -->
+    <section class="disclaimer section">
+        <h2>Important Wellbeing Notice</h2>
+
+        <p>
+            WellNest is a directory of non-clinical community wellness
+            activities. It does not provide medical advice, diagnosis
+            or professional mental health treatment. Please contact
+            qualified healthcare professionals when professional
+            support is needed.
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <a href="#home" class="logo">WellNest<span>.</span></a>
+
+        <p>Building healthier and more connected communities.</p>
+
+        <p class="copyright">
+            © 2026 WellNest. College Project Demonstration.
+        </p>
+    </footer>
+
+</body>
+</html>

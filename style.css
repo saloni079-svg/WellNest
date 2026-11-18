@@ -1,0 +1,542 @@
+/* GENERAL SETTINGS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #263b32;
+    background-color: #ffffff;
+    line-height: 1.6;
+}
+
+:root {
+    --green: #315f4b;
+    --light-green: #edf4ee;
+    --dark: #263b32;
+    --grey: #718078;
+}
+
+/* NAVIGATION BAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: var(--green);
+    text-decoration: none;
+}
+
+.logo span {
+    color: #d9a85d;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark);
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    color: var(--green);
+}
+
+.nav-btn {
+    background-color: var(--green);
+    color: white;
+    padding: 10px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+/* HERO SECTION */
+.hero {
+    min-height: 520px;
+    padding: 80px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    background-color: var(--light-green);
+}
+
+.hero-content {
+    max-width: 520px;
+}
+
+.tagline {
+    color: #78917e;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: var(--green);
+}
+
+.hero-content > p:not(.tagline) {
+    color: var(--grey);
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 22px;
+    background-color: var(--green);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn:hover,
+.nav-btn:hover {
+    background-color: #244636;
+}
+
+.hero-image {
+    width: 340px;
+    height: 340px;
+    background-color: #dce9dc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.circle {
+    width: 220px;
+    height: 220px;
+    background-color: #b6cdb5;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+}
+
+.hero-note {
+    position: absolute;
+    bottom: 15px;
+    background-color: white;
+    padding: 10px 18px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+/* COMMON SECTION SETTINGS */
+.section {
+    padding: 75px 10%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-heading h2,
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.section-heading p:last-child {
+    color: var(--grey);
+    font-size: 14px;
+}
+
+/* ABOUT SECTION */
+.about {
+    text-align: center;
+    max-width: 950px;
+    margin: auto;
+}
+
+.about > p:last-child {
+    color: var(--grey);
+    font-size: 15px;
+}
+
+/* ACTIVITY SECTION */
+.activities {
+    background-color: #f8faf7;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.filters input,
+.filters select {
+    padding: 12px;
+    border: 1px solid #dce4dc;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 13px;
+}
+
+.filters input {
+    width: 60%;
+}
+
+.activity-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.activity-card {
+    background-color: white;
+    padding: 25px;
+    border: 1px solid #e5ebe5;
+    border-radius: 9px;
+    transition: 0.3s;
+}
+
+.activity-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+}
+
+.activity-icon {
+    font-size: 35px;
+    margin-bottom: 12px;
+}
+
+.activity-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.activity-card p {
+    font-size: 13px;
+    color: var(--grey);
+    margin-bottom: 8px;
+}
+
+.category {
+    display: inline-block;
+    background-color: var(--light-green);
+    color: var(--green);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    margin-bottom: 12px;
+}
+
+.details-btn {
+    margin-top: 12px;
+    padding: 9px 14px;
+    background-color: var(--green);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.details-btn:hover {
+    background-color: #244636;
+}
+
+.no-results {
+    text-align: center;
+    color: var(--grey);
+}
+
+/* ORGANIZER SECTION */
+.organizer-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.organizer-card {
+    padding: 30px 15px;
+    text-align: center;
+    border: 1px solid #e5ebe5;
+    border-radius: 8px;
+}
+
+.avatar {
+    width: 65px;
+    height: 65px;
+    background-color: var(--light-green);
+    color: var(--green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.organizer-card h3 {
+    font-size: 17px;
+}
+
+.organizer-card p {
+    color: var(--grey);
+    font-size: 13px;
+}
+
+.organizer-card span {
+    color: var(--green);
+    font-size: 12px;
+}
+
+/* REGISTRATION SECTION */
+.registration {
+    background-color: var(--light-green);
+}
+
+.registration form {
+    max-width: 550px;
+    margin: auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 9px;
+}
+
+.registration label {
+    display: block;
+    margin: 15px 0 6px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.registration input:not([type="checkbox"]),
+.registration select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dce4dc;
+    border-radius: 5px;
+}
+
+.registration .checkbox {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-weight: normal;
+}
+
+.registration .checkbox input {
+    width: auto;
+}
+
+.registration button {
+    width: 100%;
+    margin-top: 20px;
+}
+
+#message {
+    margin-top: 15px;
+    color: var(--green);
+    font-size: 13px;
+    text-align: center;
+}
+
+/* MY REGISTRATIONS */
+.my-activities {
+    background-color: #f8faf7;
+}
+
+#myRegistrations {
+    max-width: 650px;
+    margin: auto;
+}
+
+.saved-card {
+    background-color: white;
+    border: 1px solid #e5ebe5;
+    border-radius: 7px;
+    padding: 18px;
+    margin-bottom: 12px;
+}
+
+.saved-card h3 {
+    font-size: 16px;
+}
+
+.saved-card p {
+    color: var(--grey);
+    font-size: 13px;
+}
+
+.saved-card button {
+    margin-top: 10px;
+    padding: 7px 12px;
+    border: 1px solid #dce4dc;
+    background: white;
+    color: var(--green);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* ACCESSIBILITY AND DISCLAIMER */
+.accessibility {
+    text-align: center;
+    background-color: white;
+}
+
+.accessibility h2,
+.disclaimer h2 {
+    margin-bottom: 12px;
+    font-size: 25px;
+}
+
+.accessibility p,
+.disclaimer p {
+    max-width: 850px;
+    margin: auto;
+    font-size: 13px;
+    color: var(--grey);
+}
+
+.disclaimer {
+    text-align: center;
+    background-color: #f2eee5;
+}
+
+/* FOOTER */
+footer {
+    background-color: #263f34;
+    color: white;
+    text-align: center;
+    padding: 35px 10%;
+}
+
+footer .logo {
+    color: white;
+}
+
+footer p {
+    font-size: 13px;
+    margin: 8px 0;
+}
+
+.copyright {
+    color: #c1d0c5;
+    font-size: 11px;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .nav-btn {
+        display: none;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 55px 7%;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero-image {
+        width: 260px;
+        height: 260px;
+    }
+
+    .circle {
+        width: 170px;
+        height: 170px;
+    }
+
+    .activity-container,
+    .organizer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section {
+        padding: 55px 7%;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .navbar {
+        justify-content: center;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .activity-container,
+    .organizer-container {
+        grid-template-columns: 1fr;
+    }
+
+    .filters {
+        flex-direction: column;
+    }
+
+    .filters input,
+    .filters select {
+        width: 100%;
+    }
+
+    .section-heading h2,
+    .about h2 {
+        font-size: 29px;
+    }
+
+    .registration form {
+        padding: 20px;
+    }
+}
